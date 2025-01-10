@@ -31,6 +31,7 @@ Output: [["a"]]
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         # use dictionary sorted_word "aet": ["eat","ate","tea"]
+
         anagrams = {}
 
         for word in strs:
@@ -40,7 +41,6 @@ class Solution:
                 anagrams[sorted_word].append(word)
             else:
                 anagrams[sorted_word] = [word]
-        
-        return [val for val in anagrams.values()]
 
-        
+        res = [val for val in anagrams.values()]
+        return res
