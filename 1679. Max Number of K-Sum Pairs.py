@@ -14,6 +14,7 @@ Explanation: Starting with nums = [1,2,3,4]:
 - Remove numbers 1 and 4, then nums = [2,3]
 - Remove numbers 2 and 3, then nums = []
 There are no more pairs that sum up to 5, hence a total of 2 operations.
+
 Example 2:
 
 Input: nums = [3,1,3,4,3], k = 6
