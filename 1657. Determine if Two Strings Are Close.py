@@ -9,7 +9,6 @@ You can use the operations on either string as many times as necessary.
 
 Given two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.
 
- 
 
 Example 1:
 
@@ -18,11 +17,13 @@ Output: true
 Explanation: You can attain word2 from word1 in 2 operations.
 Apply Operation 1: "abc" -> "acb"
 Apply Operation 1: "acb" -> "bca"
+
 Example 2:
 
 Input: word1 = "a", word2 = "aa"
 Output: false
 Explanation: It is impossible to attain word2 from word1, or vice versa, in any number of operations.
+
 Example 3:
 
 Input: word1 = "cabbba", word2 = "abbccc"
