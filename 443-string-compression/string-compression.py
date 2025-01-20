@@ -11,11 +11,6 @@ class Solution(object):
         s = ""
         while right < len(chars):
 
-            # if chars[left] not in s:
-            #     s += chars[left]
-            # else:
-            #     right = left + 1
-
             while right < len(chars) and chars[left] == chars[right]:
                 count += 1
                 right += 1
@@ -24,11 +19,10 @@ class Solution(object):
                 s += chars[left]+str(count)
             else:
                 s += chars[left]
+            
             count=0
             left = right
             
-            
-        
         for i in range(len(s)):
             chars[i] = s[i]
         chars = chars[:len(s)]
