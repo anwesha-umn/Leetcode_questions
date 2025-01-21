@@ -5,8 +5,12 @@ class Solution(object):
         :type k: int
         :rtype: None Do not return anything, modify nums in-place instead.
         """
+
+        # get the start index number in rotated array
         n = len(nums)
-        k = k % n
+        
+        # if k is > len(nums)
+        k = k % n      
         rotated = [0] * n
 
         for i in range(n):
@@ -15,12 +19,4 @@ class Solution(object):
         for i in range(n):
             nums[i] = rotated[i]
 
-
-        
-
-        
-            
-                
-                
-
-        
+       
