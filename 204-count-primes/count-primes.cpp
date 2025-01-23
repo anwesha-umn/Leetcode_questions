@@ -4,7 +4,6 @@ public:
 
         if (n<2) return 0;
         // marking all multiples from 2 to n as non-prime
-        int cnt = 0;
 
         vector<bool>primes(n, true); // first mark all numbers as false
         primes[0] = primes[1] = false;
@@ -18,8 +17,7 @@ public:
             }
         }
         // count the no. of true values
-        cnt = count(primes.begin(), primes.end(), true);
-        return cnt;
+        return count(primes.begin(), primes.end(), true);
     }
 };
 
