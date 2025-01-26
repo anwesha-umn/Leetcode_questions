@@ -14,10 +14,10 @@ class Solution(object):
         slow = head
         fast = head.next
         
-        if head.next==None:
+        if head.next == None:
             return None
 
-        while fast.next!=None and fast.next.next!=None:
+        while fast.next != None and fast.next.next != None:
             fast = fast.next.next
             slow = slow.next
 
