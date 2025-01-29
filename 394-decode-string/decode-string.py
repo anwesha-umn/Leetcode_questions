@@ -5,15 +5,13 @@ class Solution(object):
         :rtype: str
         """
         
-
-        i = 0
         num = 0
         temp = ""
         res = []
 
         for char in s:
             if char.isdigit():
-                num = num*10+int(char)
+                num = num*10 + int(char)
 
             elif char == "[":
                 res.append((temp, num))
