@@ -27,7 +27,7 @@ class Solution(object):
             else:
                 temp += char
 
-            print(stack)
+            # print(stack)
 
         return temp
                 
