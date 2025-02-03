@@ -5,7 +5,7 @@ public:
         if (n<2) return 0;
         // marking all multiples from 2 to n as non-prime
 
-        vector<bool>primes(n, true); // first mark all numbers as false
+        vector<bool>primes(n, true); // first mark all numbers as true
         primes[0] = primes[1] = false;
         
         for (int i=2; i*i < n; ++i){
