@@ -4,10 +4,11 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         i = 0
-        new = []
-        while i < k:
-            temp = nums.pop()
-            nums.insert(0,temp)
-            i+=1
+        n = len(nums)
+        rotated =[0] * n
+      
+        for i in range(len(nums)):
+            rotated[(k+i) % n] = nums[i]
 
-       
+        for i in range(len(nums)):
+            nums[i] = rotated[i]
