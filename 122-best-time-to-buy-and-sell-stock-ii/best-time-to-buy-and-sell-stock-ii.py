@@ -1,15 +1,16 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 
-        total = 0
+        # only count profit if its > 0
+        diff = 0
+
+        profit = 0
+
         for i in range(1,len(prices)):
 
-            profit = prices[i] - prices[i-1]
-            
-            if profit > 0:
-                total += profit
+            diff = prices[i] - prices[i-1]
 
-        return total
+            if diff > 0:
+                profit += diff
 
-
-        
+        return profit
