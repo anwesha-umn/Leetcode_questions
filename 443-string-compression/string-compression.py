@@ -1,32 +1,28 @@
-class Solution(object):
-    def compress(self, chars):
-        """
-        :type chars: List[str]
-        :rtype: int
-        """
+class Solution:
+    def compress(self, chars: List[str]) -> int:
 
-        left = 0
+        n = len(chars)
         right = 0
-        count = 0
+        left = 0
         s = ""
-        while right < len(chars):
+        count = 0
 
-            while right < len(chars) and chars[left] == chars[right]:
-                count += 1
-                right += 1
-            
-            if count!=1:
-                s += chars[left]+str(count)
+        while right < n:
+
+            while right < n and chars[left] == chars[right]:
+                count+=1
+                right+=1
+
+            if count > 1:
+                s += chars[left] + str(count)
+
             else:
                 s += chars[left]
-            
-            count=0
+            count = 0
             left = right
-            
-        for i in range(len(s)):
-            chars[i] = s[i]
-        chars = chars[:len(s)]
-     
-        return len(chars)
 
-                
+        while chars:
+            chars.pop()
+        for i in s:
+            chars.append(i)
+ 
