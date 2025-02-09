@@ -22,10 +22,8 @@ class Solution:
             dire.pop(0)
 
         if rad:
-            print(rad)
             return "Radiant"
         if dire:
-            print(dire)
             return "Dire"
 
                 
