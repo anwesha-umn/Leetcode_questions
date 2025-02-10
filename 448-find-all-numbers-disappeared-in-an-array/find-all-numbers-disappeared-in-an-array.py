@@ -1,15 +1,8 @@
-class Solution(object):
-    def findDisappearedNumbers(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
-        exp = set([i+1 for i in range(len(nums))])
-        set_nums = set(nums)
-        
-        return list(exp - set_nums)
+class Solution:
+    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
 
-        
+        expected = [i+1 for i in range(len(nums))]
+        nums_set = set(nums)
 
-
+        return list(set(expected) - set(nums_set))
 
