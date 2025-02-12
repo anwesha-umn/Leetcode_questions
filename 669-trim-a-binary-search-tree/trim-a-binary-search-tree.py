@@ -9,17 +9,16 @@ class Solution:
         if not root:
             return root
 
+        # if current root < low -> return recursively the right child (has higher value)
         if root.val < low:
             return self.trimBST(root.right, low, high)
         
-
         # if root lies within range [low, high]
         if root.val >= low and root.val <= high:
             root.left = self.trimBST(root.left, low, high)
             root.right = self.trimBST(root.right, low, high)
 
             return root
-        
         
         return self.trimBST(root.left, low, high)
 
