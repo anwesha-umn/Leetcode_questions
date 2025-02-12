@@ -13,6 +13,9 @@ class Solution:
         if root.val < low:
             return self.trimBST(root.right, low, high)
         
+        if root.val > high:
+            return self.trimBST(root.left, low, high)
+
         # if root lies within range [low, high]
         if root.val >= low and root.val <= high:
             root.left = self.trimBST(root.left, low, high)
@@ -20,6 +23,4 @@ class Solution:
 
             return root
         
-        return self.trimBST(root.left, low, high)
-
-        
+       
