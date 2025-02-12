@@ -18,6 +18,8 @@ class Solution:
         # BFS - QUEUE - add root node to queue
         # pop root node from queue - check if root node has a left or right child and append in queue
         from collections import deque
+
+        # Return 0 because an empty subtree has a depth of 0
         if not root:
             return 0
 
