@@ -1,27 +1,20 @@
-class Solution(object):
-    def longestSubarray(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        
-        left = 0
-        right = 0
-        zeros = 0
-        length = 0
+class Solution:
+    def longestSubarray(self, nums: List[int]) -> int:
 
-        for right in range(len(nums)):
-            if nums[right] == 0:
-                zeros += 1
+
+        l=0
+        zeros = 0
+        count = 0
+        for r in range(len(nums)):
+            if nums[r]==0:
+                zeros+=1
 
             if zeros > 1:
-                if nums[left] == 0:
-                    zeros -= 1
-                left += 1
+                if nums[l]==0:
+                    zeros-=1
+                l += 1
 
-            length = max(length, right - left)
+            count = max(count,r-l)
 
-        return length
-
+        return count
         
-
