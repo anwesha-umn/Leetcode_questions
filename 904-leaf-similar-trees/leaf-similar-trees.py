@@ -13,6 +13,7 @@ class Solution:
                 return root
             if not root.left and not root.right:          # check if there are no child nodes
                 leaf_vals.append(root.val)
+                
             leafnode(root.left, leaf_vals)
             leafnode(root.right, leaf_vals)
 
