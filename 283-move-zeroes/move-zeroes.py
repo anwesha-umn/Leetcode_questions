@@ -13,7 +13,7 @@ class Solution:
         
         for i in range(l,len(nums)):
             nums[i]=0
-        print(nums)
+      
         return nums
                 
         
