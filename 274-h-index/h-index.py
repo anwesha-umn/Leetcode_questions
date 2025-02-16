@@ -13,5 +13,3 @@ class Solution:
             max_cite = max(min(count,val),max_cite)
 
         return max_cite
-
-        
