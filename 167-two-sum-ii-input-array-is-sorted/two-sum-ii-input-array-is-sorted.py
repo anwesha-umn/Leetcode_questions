@@ -5,7 +5,6 @@ class Solution:
         h = len(numbers) - 1
 
         while l <= h:
-            # mid = (l + h) // 2
 
             s = numbers[l] + numbers[h]
             if s == target:
