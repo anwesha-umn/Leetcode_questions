@@ -2,18 +2,20 @@ class Solution:
     def isPalindrome(self, s: str) -> bool:
 
         new = ""
-
         for char in s:
-            if char.isalpha() or char.isdigit():
-                new+=char.lower()
+            if char.isdigit():
+                new += char
+            if char.isalpha() :
+                new += char.lower()
 
-        i=0
-        j=len(new)-1
+        l = 0
+        r = len(new) - 1
 
-        while i < j:
-            if new[i]!=new[j]:
-                return False
-            i+=1
-            j-=1
+        while l < r:
             
+            if new[l]!=new[r]:
+                return False
+            l+=1
+            r-=1
         return True
+        
