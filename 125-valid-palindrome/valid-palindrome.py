@@ -3,10 +3,10 @@ class Solution:
 
         new = ""
         for char in s:
-            if char.isdigit():
-                new += char
-            if char.isalpha() :
+            if char.isdigit() or char.isalpha():
                 new += char.lower()
+            # if char.isalpha() :
+            #     new += char.lower()
 
         l = 0
         r = len(new) - 1
