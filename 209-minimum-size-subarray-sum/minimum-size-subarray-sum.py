@@ -11,7 +11,7 @@ class Solution:
             while curr >= target:
                 length = min(length, r - l + 1)
                 curr -= nums[l]
-                print(length)
+                # print(length)
                 l+=1
 
         if length > len(nums):
