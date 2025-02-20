@@ -6,14 +6,18 @@ class Solution:
         area = 0
 
         while l < r:
-            area = max(area, (r-l)*min(height[l], height[r]))
+
+            length = min(height[l], height[r])
+            breadth = r - l
+
+            area = max(area, length*breadth)
 
             if height[l] < height[r]:
                 l += 1
-            
             else:
                 r -= 1
-        
+
         return area
+
 
          
