@@ -1,21 +1,25 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         
-        map_s_t = {}
-        map_t_s = {}
+        s_to_t = {}
+        t_to_s = {}
 
         for i in range(len(s)):
-            if s[i] not in map_s_t:
-                map_s_t[s[i]] = t[i]
+            if s[i] not in s_to_t:
+                s_to_t[s[i]] = t[i] 
             else:
-                if map_s_t[s[i]] != t[i]:  # if already mapped val of map_s_t != current t[i] 
+                if s_to_t[s[i]] != t[i]:
                     return False
 
-            if t[i] not in map_t_s:
-                map_t_s[t[i]] = s[i]
+            if t[i] not in t_to_s:
+                t_to_s[t[i]] = s[i]
             else:
-                if map_t_s[t[i]] != s[i]:  # if already mapped val of map_t_s != current s[i] 
+                if t_to_s[t[i]] != s[i]:
                     return False
+
+
+
+
 
         return True
-        
+                
