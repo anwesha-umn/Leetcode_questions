@@ -1,6 +1,5 @@
 class Solution:
     def countPrimes(self, n: int) -> int:
-
         if n < 2:
             return 0
         else:
@@ -25,6 +24,4 @@ class Solution:
                     count+=1
             
             return count
-
-             
         
