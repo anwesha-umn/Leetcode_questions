@@ -3,7 +3,7 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        #start with the end of lists (check last elements of sorted lists and update nums1 starting from the end)
+         #start with the end of lists (check last elements of sorted lists and update nums1 starting from the end)
         i = m-1
         j = n-1
         k = m + n -1
