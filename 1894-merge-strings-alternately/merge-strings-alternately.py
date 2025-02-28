@@ -1,6 +1,5 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        
         chars1 = [char for char in word1]
 
         chars2 = [char for char in word2]
