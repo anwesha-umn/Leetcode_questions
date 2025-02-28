@@ -1,6 +1,5 @@
 class Solution:
     def compress(self, chars: List[str]) -> int:
-
         n = len(chars)
         right = 0
         left = 0
@@ -25,4 +24,4 @@ class Solution:
             chars.pop()
         for i in s:
             chars.append(i)
- 
+        
