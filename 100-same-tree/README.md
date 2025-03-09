@@ -6,6 +6,7 @@
 <p><strong class="example">Example 1:</strong></p>
 <img alt="" src="https://assets.leetcode.com/uploads/2020/12/20/ex1.jpg" style="width: 622px; height: 182px;" />
 <pre>
+	
 <strong>Input:</strong> p = [1,2,3], q = [1,2,3]
 <strong>Output:</strong> true
 </pre>
